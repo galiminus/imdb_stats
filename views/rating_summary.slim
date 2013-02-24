@@ -1,0 +1,13 @@
+table.table.table-striped
+  thead
+    tr
+      th Rate
+      th Number of movies rated
+  tbody
+    - rating_summary.each_index do |index|
+      tr
+        td= index + 1
+        td= rating_summary[index]
+    tr
+      th Total
+      th= rating_summary.reduce(:+)

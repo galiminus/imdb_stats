@@ -1,0 +1,8 @@
+h2 Rating summary
+== slim :rating_summary, locals: { rating_summary: rating_summary(@ratings) }
+h2 Top 20 movies you liked more than the average
+== slim :movie_list, locals: { ratings: diff_top(@ratings, 19) }
+h2 Top 20 movies you liked less than the average
+== slim :movie_list, locals: { ratings: diff_bottom(@ratings, 19) }
+h2 Genres summary
+== slim :genre_list, locals: { genres: genres_summary(@ratings) }

@@ -1,0 +1,12 @@
+table.table.table-striped
+  thead
+    tr
+      th Name
+      th Number of movies
+      th Average rating
+  tbody
+    - genres.each do |genre|
+      tr
+        td= genre[0]
+        td= genre[1][:count]
+        td= genre[1][:average].to_s[0..2]
